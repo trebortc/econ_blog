@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ asset ('image/banner-2.jpeg') }}" alt="First slide">                     
+                    <img class="d-block w-100" src="{{ asset('image/banner-2.jpeg') }}" alt="First slide">                     
                     <div class="carousel-caption d-none d-md-block">
                         <div class="contenido-carousel m-3 p-3">
                             <h5>Edificio Plaza 10 </h5>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ asset ('image/banner-1.jpeg') }}" alt="First slide">                     
+                    <img class="d-block w-100" src="{{ asset('image/banner-1.jpeg') }}" alt="First slide">                     
                     <div class="carousel-caption d-none d-md-block">
                         <div class="contenido-carousel m-3 p-3">
                             <h5>Edificio Plaza 10 </h5>
@@ -112,7 +112,7 @@
                         <p class="card-text mb-auto">Departamento con hermosa vista a Quito Ubicado en el sector Pinar Alto,…</p>
                         <a class="color-l-p" href="#">Más información</a>
                     </div>
-                    <img class="card-img-right flex-auto d-none d-lg-block img-p-1" src="{{ asset ('img/casa-d.png') }}" alt="Card image cap">
+                    <img class="card-img-right flex-auto d-none d-lg-block img-p-1" src="{{ asset('image/casa_1.png') }}" alt="Card image cap">
                 </div>
                 <div class="pie-card border-top p-2">
                     <span class="badge badge-pill badge-light"> <i class="fa fa-stop fa-2x" aria-hidden="true"></i> 178 m2</span>
@@ -136,7 +136,7 @@
                         <p class="card-text mb-auto">Departamento con hermosa vista a Quito Ubicado en el sector Pinar Alto,…</p>
                         <a class="color-l-p" href="#">Más información</a>
                     </div>
-                    <img  class="card-img-right flex-auto d-none d-lg-block img-p-1" src="{{ asset('img/casa-diseno.png') }}" alt="Card image cap">
+                    <img  class="card-img-right flex-auto d-none d-lg-block img-p-1" src="{{ asset('image/casa_2.png') }}" alt="Card image cap">
                 </div>
                 <div class="pie-card border-top p-2">
                     <span class="badge badge-pill badge-light"> <i class="fa fa-stop fa-2x" aria-hidden="true"></i> 178 m2</span>
@@ -156,7 +156,7 @@
         <div class="row p-3">
             <div class="col-sm-4">
                 <div class="card">
-                  <img class="card-img-top img-fluid" src="{{ asset ('image/articulo-1.jpg') }}" alt="Card image cap">  
+                  <img class="card-img-top img-fluid" src="{{ asset('image/articulo-1.jpg') }}" alt="Card image cap">  
                   <div class="card-body">
                     <h6>Febrero 07, 2017 por <span class="badge badge-secondary">ECON</span></h6>
                     <p class="card-text">¿Qué es el impuesto a la plusvalía? Es una normativa que pretende evitar la especulación del costo del…</p>
@@ -166,7 +166,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="card">
-                  <img class="card-img-top img-fluid" src="{{ asset ('image/articulo-1.jpg') }}" alt="Card image cap">  
+                  <img class="card-img-top img-fluid" src="{{ asset('image/articulo-1.jpg') }}" alt="Card image cap">  
                   <div class="card-body">
                     <h6>Febrero 07, 2017 por <span class="badge badge-secondary">ECON</span></h6>
                     <p class="card-text">¿Qué es el impuesto a la plusvalía? Es una normativa que pretende evitar la especulación del costo del…</p>
@@ -176,7 +176,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="card">
-                  <img class="card-img-top img-fluid" src="{{ asset ('image/articulo-1.jpg') }}" alt="Card image cap">  
+                  <img class="card-img-top img-fluid" src="{{ asset('image/articulo-1.jpg') }}" alt="Card image cap">  
                   <div class="card-body">
                     <h6>Febrero 07, 2017 por <span class="badge badge-secondary">ECON</span></h6>
                     <p class="card-text">¿Qué es el impuesto a la plusvalía? Es una normativa que pretende evitar la especulación del costo del…</p>

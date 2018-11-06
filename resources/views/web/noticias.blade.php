@@ -14,7 +14,7 @@
                             <li class="list-inline-item"><h6>ECON-ADMIN</h6></li>
                         </ul>
                     </div>
-                    <img class="card-img-top" src="img/banner-img-1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('image/banner-img-1.jpg') }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Las Immobiliarias</h5>
                         <p class="card-text">El adjetivo inmobiliario refiere a aquello perteneciente o relativo a las cosas inmuebles. Un inmueble, por su parte, es un bien que se encuentra unido a un ...</p>
@@ -35,7 +35,7 @@
                             <li class="list-inline-item"><h6>ECON-ADMIN</h6></li>
                         </ul>
                     </div>
-                    <img class="card-img-top" src="img/banner-img-1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('image/banner-img-1.jpg') }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Las Immobiliarias</h5>
                         <p class="card-text">El adjetivo inmobiliario refiere a aquello perteneciente o relativo a las cosas inmuebles. Un inmueble, por su parte, es un bien que se encuentra unido a un ...</p>
@@ -56,7 +56,7 @@
                             <li class="list-inline-item"><h6>ECON-ADMIN</h6></li>
                         </ul>
                     </div>
-                    <img class="card-img-top" src="img/banner-img-2.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('image/banner-img-2.jpg') }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Las Immobiliarias</h5>
                         <p class="card-text">El adjetivo inmobiliario refiere a aquello perteneciente o relativo a las cosas inmuebles. Un inmueble, por su parte, es un bien que se encuentra unido a un ...</p>

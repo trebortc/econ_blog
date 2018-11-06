@@ -13,9 +13,9 @@
         </div>
         <div class="row justify-content-center">
             <div class="col m-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card mx-auto" style="width: 18rem;">
                     <a href="">
-                        <img class="card-img-top" src="img/econ_mision.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('image/econ_mision.png') }}" alt="Card image cap">
                         <figcaption class="texto-figura" >En construcción</figcaption>
                     </a>
                     <div class="card-body">
@@ -29,9 +29,9 @@
                 </div>
             </div>
             <div class="col m-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card mx-auto" style="width: 18rem;">
                     <a href="">
-                        <img class="card-img-top" src="img/quienesomos3.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('image/econ_mision.png') }}" alt="Card image cap">
                         <figcaption class="texto-figura" >En construcción</figcaption>
                     </a>
                     <div class="card-body">
@@ -45,9 +45,9 @@
                 </div>
             </div>
             <div class="col m-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card mx-auto" style="width: 18rem;">
                     <a href="">
-                        <img class="card-img-top" src="img/econ_vision.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('image/econ_mision.png') }}" alt="Card image cap">
                         <figcaption class="texto-figura" >En construcción</figcaption>
                     </a>
                     <div class="card-body">
@@ -68,9 +68,9 @@
         </div>
         <div class="row justify-content-center">
             <div class="col m-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card mx-auto" style="width: 18rem;">
                     <a href="">
-                        <img class="card-img-top" src="img/econ_vision.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('image/econ_mision.png') }}" alt="Card image cap">
                         <figcaption class="texto-figura" >En construcción</figcaption><br>
                     </a>
                     <div class="card-body">
@@ -84,9 +84,9 @@
                 </div>
             </div>
             <div class="col m-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card mx-auto" style="width: 18rem;">
                     <a href="">
-                        <img class="card-img-top" src="img/econ_vision.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('image/econ_mision.png') }}" alt="Card image cap">
                         <figcaption class="texto-figura" >En construcción</figcaption>
                     </a>
                     <div class="card-body">
@@ -100,9 +100,9 @@
                 </div>
             </div>
             <div class="col m-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card mx-auto" style="width: 18rem;">
                     <a href="">
-                        <img class="card-img-top" src="img/econ_vision.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('image/econ_mision.png') }}" alt="Card image cap">
                         <figcaption class="texto-figura" >En construcción</figcaption>
                     </a>
                     <div class="card-body">
@@ -123,9 +123,9 @@
         </div>
         <div class="row justify-content-center">
             <div class="col m-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card mx-auto" style="width: 18rem;">
                     <a href="">
-                        <img class="card-img-top" src="img/quienesomos3.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('image/econ_mision.png') }}" alt="Card image cap">
                         <figcaption class="texto-figura" >En construcción</figcaption>
                     </a>
                     <div class="card-body">
@@ -139,9 +139,9 @@
                 </div>
             </div>
             <div class="col m-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card mx-auto" style="width: 18rem;">
                     <a href="">
-                        <img class="card-img-top" src="img/quienesomos3.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('image/econ_mision.png') }}" alt="Card image cap">
                         <figcaption class="texto-figura" >En construcción</figcaption>
                     </a>
                     <div class="card-body">
@@ -155,9 +155,9 @@
                 </div>
             </div>
             <div class="col m-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card mx-auto" style="width: 18rem;">
                     <a href="">
-                        <img class="card-img-top" src="img/quienesomos3.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('image/econ_mision.png') }}" alt="Card image cap">
                         <figcaption class="texto-figura" >En construcción</figcaption>
                     </a>
                     <div class="card-body">

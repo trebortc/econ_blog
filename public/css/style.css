@@ -1,9 +1,9 @@
 .fixed-top-1 {
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 .fixed-top-2{
-    margin-top: 142px;
+    margin-top: 147px;
 }
 /*.nav-item:hover{
     background-color: rgb(0, 70, 94);                       
@@ -83,8 +83,7 @@
     }
     .d-lg-block {
         display: block!important;
-    }
-    
+    } 
 }
 
 
@@ -100,7 +99,7 @@
         margin-top: 180px;
     }
 }
-/*
+
 figcaption{
     position: absolute;
     right: 0;
@@ -109,7 +108,7 @@ figcaption{
     font-size: 13px;
     padding: 2px 9px;
     background-color:  rgb(0, 70, 94);
-}*/
+}
 
 .figure-caption{
     position: relative;
