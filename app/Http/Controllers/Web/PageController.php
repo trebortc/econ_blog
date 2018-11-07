@@ -12,7 +12,9 @@ class PageController extends Controller
 {
 
     public function inicio(){
-        return view('web.inicio');
+        $posts_noticias = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+        $posts_proyectos = Post::orderBy('id', 'DESC')->where('status', 'DRAFT')->paginate(3);
+        return view('web.inicio', compact('posts_noticias','posts_proyectos'));
     }
 
     public function financiamiento(){
@@ -37,7 +39,6 @@ class PageController extends Controller
 
     public function blog(){
     	$posts = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
-
     	return view('web.posts', compact('posts'));
     }
 

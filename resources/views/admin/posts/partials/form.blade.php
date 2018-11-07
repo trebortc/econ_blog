@@ -5,7 +5,7 @@
 	{{ Form::select('category_id', $categories, null, ['class' => 'form-control']) }}
 </div> 
 <div class="form-group">
-    {{ Form::label('name', 'Nombre de la etiqueta') }}
+    {{ Form::label('name', 'Titulo') }}
     {{ Form::text('name', null, ['class' => 'form-control', 'id' => 'name']) }}
 </div>
 <div class="form-group">
@@ -19,10 +19,10 @@
 <div class="form-group">
 	{{ Form::label('slug', 'Estado') }}
 	<label>
-		{{ Form::radio('status', 'PUBLISHED') }} Publicado
+		{{ Form::radio('status', 'PUBLISHED') }} Noticias
 	</label>
 	<label>
-		{{ Form::radio('status', 'DRAFT') }} Borrador
+		{{ Form::radio('status', 'DRAFT') }} Proyectos
 	</label>
 </div>
 <div class="form-group">

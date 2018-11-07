@@ -1,19 +1,14 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row">
+@section('contenido')
+<div class="container-fluid">
+    <div class="row pt-5 pb-5">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Ver categoría
-                </div>
-
-                <div class="panel-body">
-                    <p><strong>Nombre</strong> {{ $category->name }}</p>
-                    <p><strong>Slug</strong> {{ $category->slug }}</p>
-                    <p><strong>Descripción</strong> {{ $category->body }}</p>
-                </div>
+            <h3>Ver categoría</h3>
+            <div class="panel-body">
+                <p><strong>Nombre</strong> {{ $category->name }}</p>
+                <p><strong>Slug</strong> {{ $category->slug }}</p>
+                <p><strong>Descripción</strong> {{ $category->body }}</p>
             </div>
         </div>
     </div>

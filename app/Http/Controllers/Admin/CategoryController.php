@@ -53,7 +53,6 @@ class CategoryController extends Controller
     public function store(CategoryStoreRequest $request)
     {
         $category = Category::create($request->all());
-
         return redirect()->route('categories.edit', $category->id)->with('info', 'Categoría creada con éxito');
     }
 

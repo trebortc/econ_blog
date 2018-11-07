@@ -1,21 +1,14 @@
 @extends('layouts.app')
 
-@section('content')
+@section('contenido')
 <div class="container">
-    <div class="row">
+    <div class="row pt-5 pb-5">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Editar entrada
-                </div>
-
-                <div class="panel-body">
-                    {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT']) !!}
-                        
-                        @include('admin.posts.partials.form')
-
-                    {!! Form::close() !!}
-                </div>
+            <h3>Editar entrada</h3>
+            <div class="panel-body">
+                {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT']) !!}
+                    @include('admin.posts.partials.form')
+                {!! Form::close() !!}
             </div>
         </div>
     </div>

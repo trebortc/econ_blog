@@ -1,21 +1,14 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row">
+@section('contenido')
+<div class="container-fluid">
+    <div class="row pt-5 pb-5">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Crear categoría
-                </div>
-
-                <div class="panel-body">
-                    {!! Form::open(['route' => 'categories.store']) !!}
-                        
-                        @include('admin.categories.partials.form')
-
-                    {!! Form::close() !!}
-                </div>
+            <h3>Crear categoría</h3>
+            <div class="panel-body">
+                {!! Form::open(['route' => 'categories.store']) !!}
+                    @include('admin.categories.partials.form')
+                {!! Form::close() !!}
             </div>
         </div>
     </div>

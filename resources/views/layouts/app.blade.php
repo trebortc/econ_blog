@@ -24,15 +24,34 @@
         <!-- Navegación -->
         <nav class="navbar navbar-expand-md navbar-light flex-row fixed-top justify-content-end p-0 m-0" style="background-color: rgb(226,227,229);" >
             <ul class="navbar-nav flex-row ml-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link p-3"><i class="fa fa-search" style="color:black;"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-3"><i class="fa fa-user" style="color:black;"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-3"><i class="fab fa-facebook-f" style="color:black;"></i></a>
-                </li>
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="{{ route('login') }}"><i class="fa fa-user" style="color:black;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="{{ route('register') }}"><i class="fas fa-clipboard-list" style="color:black;"></i></a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="{{ route('tags.index') }}"><i class="fa fa-tag" style="color:black;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="{{ route('categories.index') }}"><i class="fab fa fa-bars" style="color:black;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="{{ route('posts.index') }}"><i class="fa fa-clipboard" style="color:black;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            <i class="fa fa-times" aria-hidden="true" style="color:black;"></i>
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                @endguest
             </ul>         
         </nav>
         <nav class="navbar navbar-expand-md navbar-light flex-row fixed-top fixed-top-1 justify-content-center" style="background-color: rgb(226,227,229);" >

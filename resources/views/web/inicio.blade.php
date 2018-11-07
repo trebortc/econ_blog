@@ -98,54 +98,45 @@
     </div>
     <div class="container-fluid color-s">
         <div class="row justify-content-center p-3">
-            <div class="col-sm-5 m-5 contorno">
-                <div class="titulo-card">
-                    <h5 class="pt-2 pb-2 mb-2">Dpto, 178 M2, 3 Dorm, Sector Pinar Alto</h5>
-                </div>
-                <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-                    <div class="card-body d-flex flex-column align-items-start">
-                        <strong class="d-inline-block mb-2 color-l-p">Departamentos</strong>
-                        <h3 class="mb-0">
-                        <a class="text-dark" href="#">Desde $170,000</a>
-                        </h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">Departamento con hermosa vista a Quito Ubicado en el sector Pinar Alto,…</p>
-                        <a class="color-l-p" href="#">Más información</a>
+            @foreach ($posts_proyectos as $post)
+                <div class="col-sm-5 m-5 contorno">
+                    <div class="titulo-card">
+                        <h5 class="pt-2 pb-2 mb-2">{{$post->name}}</h5>
                     </div>
-                    <img class="card-img-right flex-auto d-none d-lg-block img-p-1" src="{{ asset('image/casa_1.png') }}" alt="Card image cap">
-                </div>
-                <div class="pie-card border-top p-2">
-                    <span class="badge badge-pill badge-light"> <i class="fa fa-stop fa-2x" aria-hidden="true"></i> 178 m2</span>
-                    <span class="badge badge-pill badge-light"> <i class="fa fa-map-marked fa-2x" aria-hidden="true"></i> Sector Pinar Alto</span>
-                    <span class="badge badge-pill badge-light"> <i class="fa fa-bed fa-2x" aria-hidden="true"></i> 3 Bedrooms</span>
-                    <span class="badge badge-pill badge-light"> <i class="fa fa-bath fa-2x" aria-hidden="true"></i> 4 Bathrooms</span>
-                    <span class="badge badge-pill badge-light"> <i class="fa fa-car fa-2x" aria-hidden="true"></i> 2 Garages</span>
-                </div>
-            </div>
-            <div class="col-sm-5 m-5 contorno">
-                <div class="titulo-card">
-                    <h5 class="pt-2 pb-2 mb-2">Dpto, 178 M2, 3 Dorm, Sector Pinar Alto</h5>
-                </div>
-                <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-                    <div class="card-body d-flex flex-column align-items-start">
-                        <strong class="d-inline-block mb-2 color-l-p">Departamentos</strong>
-                        <h3 class="mb-0">
-                        <a class="text-dark" href="#">Desde $170,000</a>
-                        </h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">Departamento con hermosa vista a Quito Ubicado en el sector Pinar Alto,…</p>
-                        <a class="color-l-p" href="#">Más información</a>
+                    <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <strong class="d-inline-block mb-2 color-l-p">{{ $post->slug }}</strong>
+                            <h3 class="mb-0">
+                            </h3>
+                            <div class="mb-1 text-muted">{{$post->updated_at}}</div>
+                        <p class="card-text mb-auto">{{ $post->excerpt}}</p>
+                            <a class="color-l-p" href="#">Más información</a>
+                        </div>
+                        <img class="card-img-right flex-auto d-none d-lg-block img-p-1" src="{{ asset('image/casa_1.png') }}" alt="Card image cap">
                     </div>
-                    <img  class="card-img-right flex-auto d-none d-lg-block img-p-1" src="{{ asset('image/casa_2.png') }}" alt="Card image cap">
+                    <div class="pie-card border-top p-2">
+                        <span class="badge badge-pill badge-light"> <i class="fa fa-stop fa-2x" aria-hidden="true"></i> 178 m2</span>
+                        <span class="badge badge-pill badge-light"> <i class="fa fa-map-marked fa-2x" aria-hidden="true"></i> Sector Pinar Alto</span>
+                        <span class="badge badge-pill badge-light"> <i class="fa fa-bed fa-2x" aria-hidden="true"></i> 3 Bedrooms</span>
+                        <span class="badge badge-pill badge-light"> <i class="fa fa-bath fa-2x" aria-hidden="true"></i> 4 Bathrooms</span>
+                        <span class="badge badge-pill badge-light"> <i class="fa fa-car fa-2x" aria-hidden="true"></i> 2 Garages</span>
+                    </div>
                 </div>
-                <div class="pie-card border-top p-2">
-                    <span class="badge badge-pill badge-light"> <i class="fa fa-stop fa-2x" aria-hidden="true"></i> 178 m2</span>
-                    <span class="badge badge-pill badge-light"> <i class="fa fa-map-marked fa-2x" aria-hidden="true"></i> Sector Pinar Alto</span>
-                    <span class="badge badge-pill badge-light"> <i class="fa fa-bed fa-2x" aria-hidden="true"></i> 3 Bedrooms</span>
-                    <span class="badge badge-pill badge-light"> <i class="fa fa-bath fa-2x" aria-hidden="true"></i> 4 Bathrooms</span>
-                    <span class="badge badge-pill badge-light"> <i class="fa fa-car fa-2x" aria-hidden="true"></i> 2 Garages</span>
+            @endforeach 
+            @foreach ($posts_proyectos as $post)
+            <div class="col-sm-4">
+                <div class="card">
+                    @if($post->file)
+                        <img class="card-img-top img-fluid" src="{{ $post->file }}"  alt="imagen">
+                    @endif
+                    <div class="card-body">
+                        <h6>{{ $post->updated_at }} por <span class="badge badge-secondary">ECON</span></h6>
+                        <p class="card-text">{{ $post->excerpt }}</p>
+                        <a href="{{ route('post', $post->slug) }}" class="btn btn-secondary btn-sm">Leer más <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </div>
                 </div>
-            </div>
+            </div>    
+            @endforeach 
         </div>
     </div>
     <div class="container-fluid">
@@ -154,36 +145,20 @@
     </div>
     <div class="container-fluid">
         <div class="row p-3">
-            <div class="col-sm-4">
-                <div class="card">
-                  <img class="card-img-top img-fluid" src="{{ asset('image/articulo-1.jpg') }}" alt="Card image cap">  
-                  <div class="card-body">
-                    <h6>Febrero 07, 2017 por <span class="badge badge-secondary">ECON</span></h6>
-                    <p class="card-text">¿Qué es el impuesto a la plusvalía? Es una normativa que pretende evitar la especulación del costo del…</p>
-                    <a href="#" class="btn btn-secondary btn-sm">Leer más <i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                  </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                  <img class="card-img-top img-fluid" src="{{ asset('image/articulo-1.jpg') }}" alt="Card image cap">  
-                  <div class="card-body">
-                    <h6>Febrero 07, 2017 por <span class="badge badge-secondary">ECON</span></h6>
-                    <p class="card-text">¿Qué es el impuesto a la plusvalía? Es una normativa que pretende evitar la especulación del costo del…</p>
-                    <a href="#" class="btn btn-secondary btn-sm">Leer más <i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                  </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                  <img class="card-img-top img-fluid" src="{{ asset('image/articulo-1.jpg') }}" alt="Card image cap">  
-                  <div class="card-body">
-                    <h6>Febrero 07, 2017 por <span class="badge badge-secondary">ECON</span></h6>
-                    <p class="card-text">¿Qué es el impuesto a la plusvalía? Es una normativa que pretende evitar la especulación del costo del…</p>
-                    <a href="#" class="btn btn-secondary btn-sm">Leer más <i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                  </div>
-                </div>
-            </div>
+            @foreach ($posts_noticias as $post)
+                <div class="col-sm-4">
+                    <div class="card">
+                        @if($post->file)
+                            <img class="card-img-top img-fluid" src="{{ $post->file }}"  alt="imagen">
+                        @endif
+                        <div class="card-body">
+                            <h6>{{ $post->updated_at }} por <span class="badge badge-secondary">ECON</span></h6>
+                            <p class="card-text">{{ $post->excerpt }}</p>
+                            <a href="{{ route('post', $post->slug) }}" class="btn btn-secondary btn-sm">Leer más <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>    
+            @endforeach 
         </div>
     </div>
 @endsection
