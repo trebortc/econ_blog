@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     protected $fillable = [
-        'user_id', 'category_id', 'name', 'slug', 'excerpt', 'body', 'status', 'file'
+        'user_id', 'category_id', 'name', 'slug', 'excerpt', 'body', 'status', 'file', 'file1', 'file2', 'file3', 'file4'
     ];
 
     public function category()

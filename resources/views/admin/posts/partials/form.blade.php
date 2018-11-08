@@ -17,6 +17,22 @@
     {{ Form::file('image') }}
 </div>
 <div class="form-group">
+	{{ Form::label('image1', 'Imagen 2') }}
+	{{ Form::file('image1') }}
+</div>
+<div class="form-group">
+	{{ Form::label('image2', 'Imagen 3') }}
+	{{ Form::file('image2') }}
+</div>
+<div class="form-group">
+	{{ Form::label('image3', 'Imagen 4') }}
+	{{ Form::file('image3') }}
+</div>
+<div class="form-group">
+	{{ Form::label('image4', 'Imagen 5') }}
+	{{ Form::file('image4') }}
+</div>
+<div class="form-group">
 	{{ Form::label('slug', 'Estado') }}
 	<label>
 		{{ Form::radio('status', 'PUBLISHED') }} Noticias

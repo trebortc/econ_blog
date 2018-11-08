@@ -18,27 +18,37 @@ class PageController extends Controller
     }
 
     public function financiamiento(){
-        return view('web.financiamiento');
+        $posts_noticias = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+        $posts_proyectos = Post::orderBy('id', 'DESC')->where('status', 'DRAFT')->paginate(3);
+        return view('web.financiamiento', compact('posts_noticias','posts_proyectos'));
     }
 
     public function noticias(){
-        return view('web.noticias');
+        $posts_noticias = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+        $posts_proyectos = Post::orderBy('id', 'DESC')->where('status', 'DRAFT')->paginate(3);
+        return view('web.noticias', compact('posts_noticias','posts_proyectos'));
     }
 
     public function proyectos(){
-        return view('web.proyectos');
+        $posts_noticias = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+        $posts_proyectos = Post::orderBy('id', 'DESC')->where('status', 'DRAFT')->paginate(3);
+        return view('web.proyectos', compact('posts_noticias','posts_proyectos'));
     }
 
     public function quienesomos(){
-        return view('web.quienesomos');
+        $posts_noticias = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+        $posts_proyectos = Post::orderBy('id', 'DESC')->where('status', 'DRAFT')->paginate(3);
+        return view('web.quienesomos', compact('posts_noticias','posts_proyectos'));
     }
 
     public function contactos(){
-        return view('web.contactos');
+        $posts_noticias = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+        $posts_proyectos = Post::orderBy('id', 'DESC')->where('status', 'DRAFT')->paginate(3);
+        return view('web.contactos', compact('posts_noticias','posts_proyectos'));
     }
 
     public function blog(){
-    	$posts = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+    	$posts = Post::orderBy('id', 'DESC')->paginate(3);
     	return view('web.posts', compact('posts'));
     }
 
@@ -46,7 +56,7 @@ class PageController extends Controller
         $category = Category::where('slug', $slug)->pluck('id')->first();
 
         $posts = Post::where('category_id', $category)
-            ->orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(10);
+            ->orderBy('id', 'DESC')->paginate(10);
 
         return view('web.posts', compact('posts'));
     }
@@ -55,7 +65,7 @@ class PageController extends Controller
         $posts = Post::whereHas('tags', function($query) use ($slug) {
             $query->where('slug', $slug);
         })
-        ->orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+        ->orderBy('id', 'DESC')->paginate(3);
 
         return view('web.posts', compact('posts'));
     }
